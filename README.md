@@ -8,7 +8,7 @@ Make sure you have composer installed in your system (or download & install from
 Make sure you have installed the postgres database in your system. 
 Then configure database_url in .env file
 
-DATABASE_URL="postgresql://<root>:<password>@127.0.0.1:5432/<db_name>?serverVersion=16&charset=utf8"
+DATABASE_URL="postgresql://<usernam-here>:<password-here>@127.0.0.1:5432/<db_name-here>?serverVersion=16&charset=utf8"
 
 Then, you can run the following command to run the migration:
 ```bash
