@@ -12,6 +12,7 @@ DATABASE_URL="postgresql://<usernam-here>:<password-here>@127.0.0.1:5432/<db_nam
 
 Then, you can run the following command to run the migration:
 ```bash
+  php bin/console doctrine:database:create
   php bin/console doctrine:migrations:migrate
 ```
 Make sure you've symfony CLI installed in your system (or download & install from here https://symfony.com/download). Then you can run the following command to run the server:
