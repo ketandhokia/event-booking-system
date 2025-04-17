@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use OpenApi\Attributes as OA;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -25,7 +24,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 180)]
     #[Groups(['user', 'attendee'])]
-    #[OA\Property(description: 'Email address of the user.')]
     private ?string $email = null;
 
     /**
@@ -38,7 +36,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
-    #[OA\Property(description: 'Password of the user.', type: 'string', maxLength: 255)]
     private ?string $password = null;
 
     public function getId(): ?int

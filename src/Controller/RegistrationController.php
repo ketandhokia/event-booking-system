@@ -2,12 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
 use App\Manager\UserManager;
 use App\Validator\RegisterPayloadValidator;
-use Nelmio\ApiDocBundle\Attribute\Model;
-use Nelmio\ApiDocBundle\Attribute\Security;
-use OpenApi\Attributes as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -38,16 +34,6 @@ final class RegistrationController extends AbstractController
      * @return JsonResponse
      */
     #[Route('/register', name: 'app_registration', methods: ['POST'])]
-    #[OA\Response(
-        response: 200,
-        description: 'Create venue',
-        content: new OA\JsonContent(
-            type: 'array',
-            items: new OA\Items(ref: new Model(type: User::class, groups: ['user']))
-        )
-    )]
-    #[OA\Tag(name: 'Register')]
-    #[Security(name: 'Bearer')]
     public function index(Request $request): JsonResponse
     {
         $params = json_decode($request->getContent(), true);

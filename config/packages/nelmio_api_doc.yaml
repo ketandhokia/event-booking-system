@@ -45,3 +45,28 @@ nelmio_api_doc:
                         '400':
                             description: Invalid JSON.
                     security: [ ]
+            /api/register:
+                post:
+                    tags:
+                        - Register
+                    summary: Register new user
+                    requestBody:
+                        content:
+                            application/json:
+                                schema:
+                                    properties:
+                                        email:
+                                            type: string
+                                        password:
+                                            type: string
+                                    type: object
+                    responses:
+                        '200':
+                            description: OK
+                            content:
+                                application/json:
+                                    schema:
+                                        type: object
+                        '400':
+                            description: Invalid JSON.
+                    security: [ ]
