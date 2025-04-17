@@ -22,4 +22,9 @@ Make sure you've symfony CLI installed in your system (or download & install fro
 You can check the api docs on following URL
 http://127.0.0.1:8000/api/docs
 
-You can register a new user using `POST /api/register` api. once you successfully registered, You can use the `POST /api/login_check` api to login. You will get a JWT token in the response. You can use this token to access the protected routes. You can use the `Authorize` button on the right top corner to authorize yourself to use all the endpoints. 
+You can register a new user using `POST /api/register` api. once you successfully registered, You can use the `POST /api/login_check` api to login. You will get a JWT token in the response. You can use this token to access the protected routes. You can use the `Authorize` button on the right top corner to authorize yourself to use all the endpoints.
+
+You can run the following command to run the test cases:
+```bash
+  php bin/phpunit
+```
